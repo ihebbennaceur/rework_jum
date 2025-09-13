@@ -1,0 +1,90 @@
+in this folder we will work on getting data from api  or (alreday downloaded data ) to update our database , we will do this every 6 months
+
+
+the new file name build_data.py   , before it was getitem15.py
+
+
+
+
+"totalQuantity": 104811, #"123.0" → 123
+
+function check_moq
+   """
+   "moq": 1, #If it 0, change to 1, if it 2 change to 1. Another number dont touch
+    """
+
+
+function check_brandName(x)
+ 	if does not have data write like this
+	"brandName": {},
+
+
+function check_origianl_price
+43.01 -> 43.01
+43.00 -> 43
+43    -> 43
+
+
+worked on video the output allways and if there are many links we take first one
+
+   "video": {
+        "RU": "https://cloud.video.taobao.com/play/u/3447238037/p/2/e/6/t/1/421701053319.mp4"
+    },
+
+
+worked on skuImage  ,
+if they are empty add first image from mainImages
+
+tested by removing an url from original data and he will be replaced with first item
+
+the price should be :   "price": {
+                "TJS": 0,
+                "UZS": 0,
+                "RUB": 0
+            },
+
+
+function check_seller_title
+tested 
+null -> title": "e尚lantun"
+""   -> title": "e尚lantun"
+"iheb" -> title": "iheb"    
+
+
+worked on sku props : change to original name of key and color still need to be first, and all same color need write in group
+ tested : 719014459384 	
+
+
+
+ to add chinise color manully in line 187
+
+ if moq > 31 then delete product L407  the vb in env
+
+ Tested with  1 product with moq > 31     ->  output is []
+              3 products  , product 1 ,product2 , product3  -> [product1,product2 ]  
+              everytime 2 product if the first product is grater than 31 first product or second or thrid
+
+
+if we have empty sku : we put dummy data : 
+ "sku": [
+        {
+            "skuId": "5555555555555555555555",
+            "originalPrice": "2.40",
+            "skuProps": "{}",
+            "skuImage": {
+                "RU": "https://cbu01.alicdn.com/img/ibank/3397617556_1467177969.jpg"
+            },
+            "price": {
+                "TJS": 0,
+                "UZS": 0,
+                "RUB": 0
+            },
+            "moq": 1,
+            "quantity": "55555",
+            "specId": "",
+            "status": "active"
+        }
+    ],
+
+
+funct to remove , at the end of jsons
